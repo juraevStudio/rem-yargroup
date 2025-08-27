@@ -142,6 +142,8 @@ $('.reviews__slider').slick({
     ]
 });
 if (window.innerWidth > 768) {
+    
+} else {
     // header burgir
     $(".header__burgir").click(function() {
         const b = $(".header__burgir"), h = $(".header");
