@@ -1,4 +1,17 @@
-setTimeout(function() {
+// setTimeout(function() {
+//     $(".load").addClass("active");
+//     setTimeout(function() {
+//         $(".load").addClass("open");
+//         setTimeout(function() {
+//             $(".load").addClass("opacity");
+//             setTimeout(function() {
+//                 $(".load").addClass("none");
+//                 $("body").removeClass("hidden");
+//             }, 500);
+//         }, 300);
+//     }, 1100);
+// }, 100);
+window.addEventListener('load', function () {
     $(".load").addClass("active");
     setTimeout(function() {
         $(".load").addClass("open");
@@ -8,9 +21,9 @@ setTimeout(function() {
                 $(".load").addClass("none");
                 $("body").removeClass("hidden");
             }, 500);
-        }, 800);
+        }, 300);
     }, 1100);
-}, 100);
+});
 
 // Header Fixed
 $(window).on('scroll', function () {

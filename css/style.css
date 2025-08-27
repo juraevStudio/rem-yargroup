@@ -83,42 +83,96 @@ ul, ol {
 }
 .load .wrap {
   display: flex;
-  width: 177px;
+  width: 250px;
   height: 10px;
   position: absolute;
-  top: -300px;
+  top: -380px;
   left: 50%;
   transform: translateX(-50%);
   transition: all 1s linear;
 }
-.load .line {
+.load .wrap .line {
   width: 100%;
   height: 100%;
   background: #297fb8;
   opacity: 0.8;
 }
-.load .icon {
-  width: 200px;
+.load .wrap .icon {
+  width: 280px;
   position: absolute;
-  bottom: -260px;
+  bottom: -370px;
+  right: -2px;
+  z-index: 3;
+}
+.load .wrap2 {
+  display: flex;
+  width: 250px;
+  height: 10px;
+  position: absolute;
+  bottom: -380px;
+  left: 20%;
+  transform: translateX(-50%);
+  transition: all 1s linear;
+}
+.load .wrap2 .line {
+  width: 100%;
+  height: 100%;
+  background: #297fb8;
+  opacity: 0.8;
+}
+.load .wrap2 .icon {
+  width: 280px;
+  position: absolute;
+  top: -370px;
+  right: -2px;
+  z-index: 3;
+}
+.load .wrap3 {
+  display: flex;
+  width: 250px;
+  height: 10px;
+  position: absolute;
+  bottom: -380px;
+  right: 20%;
+  transform: translateX(50%);
+  transition: all 1s linear;
+}
+.load .wrap3 .line {
+  width: 100%;
+  height: 100%;
+  background: #297fb8;
+  opacity: 0.8;
+}
+.load .wrap3 .icon {
+  width: 280px;
+  position: absolute;
+  top: -370px;
   right: -2px;
   z-index: 3;
 }
 .load .logo {
-  width: 150px;
-  position: relative;
+  width: 300px;
+  height: 300px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
   z-index: 9;
   border-radius: 50%;
-  overflow: hidden;
-  transform: translateX(-1px);
+  transform: translate(-50%, -50%);
+  transition: all .5s linear;
 }
-.load.active .wrap {
-  height: calc(100vh + 300px);
+.load.active .wrap, .load.active .wrap2, .load.active .wrap3 {
+  height: calc(100vh + 400px);
 }
-.load.open .wrap {
+.load.open .wrap, .load.open .wrap2, .load.open .wrap3 {
   width: 100%;
   transition: all .5s linear;
   overflow: hidden;
+}
+.load.open .logo {
+  /* width: 800px;
+  height: 800px;
+  opacity: 0; */
 }
 .load.opacity {
   opacity: 0;
@@ -1685,5 +1739,8 @@ h6 {
   }
   .services__wrap ul li {
     font-size: 12px;
+  }
+  .load .wrap2, .load .wrap3 {
+    display: none;
   }
 }
