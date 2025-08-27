@@ -66,7 +66,7 @@ ul, ol {
   margin: 0 auto;
 }
 
-.load_text {
+.loader {
   display: none;
 }
 .load {
@@ -1747,47 +1747,38 @@ h6 {
     display: none;
   }
 
-  .load_text {
+  .loader {
+    display: block;
     position: absolute;
     top: 70%;
     left: 50%;
     transform: translate(-50%, -50%);
-    display: block;
-    color: #181617;
-    font: 400 24px/1.2 system-ui, sans-serif;
-    display: inline-flex;
-    gap: .04em;
-    white-space: pre;
-    user-select: none;
     transition: all .3s ease;
   }
-  .load.active .load_text {
+  .loader span {
+      display: inline-block;
+      font-size: 16px;
+      font-weight: 400;
+      color: #181617;
+      animation: bounce 1s infinite;
+  }
+  .load.active .loader {
     opacity: 0;
   }
-  .load_text span {
-    display: inline-block;
-    animation: float 2.4s ease-in-out infinite;
-    transform-origin: 50% 100%;
-  }
+  .loader span:nth-child(1) { animation-delay: 0s; }
+  .loader span:nth-child(2) { animation-delay: 0.1s; }
+  .loader span:nth-child(3) { animation-delay: 0.2s; }
+  .loader span:nth-child(4) { animation-delay: 0.3s; }
+  .loader span:nth-child(5) { animation-delay: 0.4s; }
+  .loader span:nth-child(6) { animation-delay: 0.5s; }
+  .loader span:nth-child(7) { animation-delay: 0.6s; }
+  .loader span:nth-child(8) { animation-delay: 0.7s; }
+  .loader span:nth-child(9) { animation-delay: 0.8s; }
+  .loader span:nth-child(10) { animation-delay: 0.9s; }
+  .loader span:nth-child(11) { animation-delay: 1s; }
 
-  @keyframes float {
-    0%   { transform: translateY(0)      rotate(0deg);    }
-    25%  { transform: translateY(-6px)   rotate(-2deg);   }
-    50%  { transform: translateY(0)      rotate(0.6deg);  }
-    75%  { transform: translateY(5px)    rotate(2deg);    }
-    100% { transform: translateY(0)      rotate(0deg);    }
+  @keyframes bounce {
+      0%, 100% { transform: translateY(0); }
+      50%      { transform: translateY(-10px); }
   }
-
-  /* волна: задержки по порядку */
-  .load_text span:nth-child(1)  { animation-delay: 0s; }
-  .load_text span:nth-child(2)  { animation-delay: .06s; }
-  .load_text span:nth-child(3)  { animation-delay: .12s; }
-  .load_text span:nth-child(4)  { animation-delay: .18s; }
-  .load_text span:nth-child(5)  { animation-delay: .24s; }
-  .load_text span:nth-child(6)  { animation-delay: .30s; }
-  .load_text span:nth-child(7)  { animation-delay: .36s; }
-  .load_text span:nth-child(8)  { animation-delay: .42s; }
-  .load_text span:nth-child(9)  { animation-delay: .48s; }
-  .load_text span:nth-child(10) { animation-delay: .54s; }
-  .load_text span:nth-child(11) { animation-delay: .60s; }
 }
