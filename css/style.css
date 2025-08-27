@@ -66,6 +66,24 @@ ul, ol {
   margin: 0 auto;
 }
 
+@keyframes lines {
+  0% {
+    height: 0;
+  }
+  50% {
+    width: 250px;
+    height: calc(100vh + 400px);
+  }
+  60% {
+    width: 250px;
+    height: calc(100vh + 400px);
+  }
+  100% {
+    width: 100%;
+    height: calc(100vh + 400px);
+  }
+}
+
 .loader {
   display: none;
 }
@@ -92,7 +110,8 @@ ul, ol {
   top: -380px;
   left: 50%;
   transform: translateX(-50%);
-  transition: all 1s linear;
+  animation: lines 1.5s linear 1 forwards;
+  animation-delay: .2s;
 }
 .load .wrap .line {
   width: 100%;
@@ -115,7 +134,8 @@ ul, ol {
   bottom: -380px;
   left: 20%;
   transform: translateX(-50%);
-  transition: all 1s linear;
+  animation: lines 1.5s linear 1 forwards;
+  animation-delay: .2s;
 }
 .load .wrap2 .line {
   width: 100%;
@@ -138,7 +158,8 @@ ul, ol {
   bottom: -380px;
   right: 20%;
   transform: translateX(50%);
-  transition: all 1s linear;
+  animation: lines 1.5s linear 1 forwards;
+  animation-delay: .2s;
 }
 .load .wrap3 .line {
   width: 100%;
@@ -163,19 +184,6 @@ ul, ol {
   border-radius: 50%;
   transform: translate(-50%, -50%);
   transition: all .5s linear;
-}
-.load.active .wrap, .load.active .wrap2, .load.active .wrap3 {
-  height: calc(100vh + 400px);
-}
-.load.open .wrap, .load.open .wrap2, .load.open .wrap3 {
-  width: 100%;
-  transition: all .5s linear;
-  overflow: hidden;
-}
-.load.open .logo {
-  /* width: 800px;
-  height: 800px;
-  opacity: 0; */
 }
 .load.opacity {
   opacity: 0;
@@ -1748,7 +1756,7 @@ h6 {
   }
 
   .loader {
-    display: block;
+    /* display: block; */
     position: absolute;
     top: 70%;
     left: 50%;

@@ -1,18 +1,10 @@
-window.addEventListener('load', function () {
+setTimeout(function() {
+    $(".load").addClass("opacity");
     setTimeout(function() {
-        $(".load").addClass("active");
-        setTimeout(function() {
-            $(".load").addClass("open");
-            setTimeout(function() {
-                $(".load").addClass("opacity");
-                setTimeout(function() {
-                    $(".load").addClass("none");
-                    $("body").removeClass("hidden");
-                }, 500);
-            }, 300);
-        }, 1100);
-    },100);
-});
+        $(".load").addClass("none");
+        $("body").removeClass("hidden");
+    }, 600);
+}, 1500);
 
 // Header Fixed
 $(window).on('scroll', function () {
