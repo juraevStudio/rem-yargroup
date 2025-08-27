@@ -4,7 +4,7 @@ setTimeout(function() {
         $(".load").addClass("none");
         $("body").removeClass("hidden");
     }, 600);
-}, 1500);
+}, 2000);
 
 // Header Fixed
 $(window).on('scroll', function () {

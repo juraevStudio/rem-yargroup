@@ -68,6 +68,7 @@ ul, ol {
 
 @keyframes lines {
   0% {
+    width: 250px;
     height: 0;
   }
   50% {
@@ -111,7 +112,7 @@ ul, ol {
   left: 50%;
   transform: translateX(-50%);
   animation: lines 1.5s linear 1 forwards;
-  animation-delay: .2s;
+  animation-delay: .5s;
 }
 .load .wrap .line {
   width: 100%;
@@ -135,7 +136,7 @@ ul, ol {
   left: 20%;
   transform: translateX(-50%);
   animation: lines 1.5s linear 1 forwards;
-  animation-delay: .2s;
+  animation-delay: .5s;
 }
 .load .wrap2 .line {
   width: 100%;
@@ -159,7 +160,7 @@ ul, ol {
   right: 20%;
   transform: translateX(50%);
   animation: lines 1.5s linear 1 forwards;
-  animation-delay: .2s;
+  animation-delay: .5s;
 }
 .load .wrap3 .line {
   width: 100%;
