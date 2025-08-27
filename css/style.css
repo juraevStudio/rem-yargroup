@@ -1060,7 +1060,7 @@ h2 + p {
   overflow: hidden;
 }
 .reviews .container {
-  padding-top: 170px;
+  /* padding-top: 170px; */
 }
 .reviews__slider .slick-list {
   overflow: visible;
