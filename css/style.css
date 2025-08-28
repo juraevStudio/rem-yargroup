@@ -479,10 +479,10 @@ ul, ol {
   position: relative;
   z-index: 2;
   font-size: 24px;
-  line-height: 28px;
+  line-height: 32px;
   color: #fff;
   text-align: center;
-  padding-top: 10%;
+  padding-top: 20%;
 }
 
 .banner__wrap h1 {
@@ -500,7 +500,7 @@ ul, ol {
 }
 
 .banner__wrap p {
-  font-weight: 100;
+  font-weight: 300;
   margin-bottom: 72px;
   opacity: 1;
 }
@@ -1616,7 +1616,7 @@ h6 {
   .banner__wrap {
     font-size: 15px;
     line-height: 24px;
-    padding-top: 40vh;
+    padding-top: 44vh;
   }
   .galleryVideo .container {
     padding-top: 70px;
