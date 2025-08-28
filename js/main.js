@@ -5,6 +5,12 @@ setTimeout(function() {
         $("body").removeClass("hidden");
     }, 600);
 }, 2000);
+setTimeout(function() {
+    $(".thunks").addClass("active");
+    $(".thunks__close").click(function() {
+        $(".thunks").removeClass("active");
+    });
+}, 5000);
 
 // Header Fixed
 $(window).on('scroll', function () {
